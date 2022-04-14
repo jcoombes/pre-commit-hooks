@@ -1,23 +1,17 @@
+[build-system]
+requires = [ "poetry-core>=1.0.0",]
+build-backend = "poetry.core.masonry.api"
+
 [tool.poetry]
 name = "pre-commit-hooks"
 version = "0.1.0"
 description = ""
-authors = ["Jjazh <coombes.jd@gmail.com>"]
-
-[tool.poetry.dependencies]
-python = "^3.9"
-# Everything after this should be sorted alphabetically
-loguru = "^0.6.0"
-isort = "^5.10.1"
-toml = "^0.10.2"
-ipython = "^8.2.0"
-prettier = "^0.0.5"
+authors = [ "Jjazh <coombes.jd@gmail.com>",]
 
 [tool.poetry.dev-dependencies]
-pandas = "^1.4.2"
 example-pypi-package = "^0.1.0"
-black = {version = "^22.3.0", allow-prereleases = true}
+pandas = "^1.4.2"
 
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+[tool.poetry.dev-dependencies.black]
+version = "^22.3.0"
+allow-prereleases = true
